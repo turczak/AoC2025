@@ -10,7 +10,7 @@ public class Dial {
             case 'R' -> position += rotation.getClicks();
             default -> throw new IllegalStateException("Unexpected direction: " + rotation.getDirection());
         }
-        position = ((position % 100) + 100) % 100;
+        position = position % 100;
     }
 
     public int getPosition() {
